@@ -1,7 +1,5 @@
 const contactsReducer = (state, action) => {
   switch (action.type) {
-    case "addContactsFromLocaleStorage":
-      return [action.payload.contacts];
     case "addContact":
       return [...state, action.payload.contact];
     case "removeContact":
