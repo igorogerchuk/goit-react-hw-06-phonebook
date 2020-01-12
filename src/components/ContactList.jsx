@@ -23,7 +23,7 @@ export default function ContactList({ filter }) {
 
   return (
     <>
-      {filteredContacts.length && (
+      {filteredContacts.length !== 0 && (
         <ul>
           {filteredContacts.map(contact => (
             <li key={contact.id}>
