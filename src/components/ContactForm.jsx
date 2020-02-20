@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Context } from "../services/Store";
 const uuidv4 = require("uuid/v4");
 
-export default function ContactForm() {
+const ContactForm = () => {
   const [contacts, dispatch] = useContext(Context);
 
   const [name, setName] = useState("");
@@ -59,4 +59,6 @@ export default function ContactForm() {
       <button type="submit">Add Contact</button>
     </form>
   );
-}
+};
+
+export default ContactForm;

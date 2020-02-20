@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import ContactForm from "./ContactForm";
 import ContactList from "./ContactList";
-import Filter from "./Filter";
 import Store from "../services/Store";
 
-export default function App() {
+const App = () => {
   const [filter, setFilter] = useState("");
 
   const changeFilter = e => {
@@ -16,8 +15,10 @@ export default function App() {
       <h1>Phonebook</h1>
       <ContactForm />
       <h2>Contacts</h2>
-      <Filter filter={filter} changeFilter={changeFilter} />
+      <input type="text" value={filter} onChange={changeFilter} />
       <ContactList filter={filter} />
     </Store>
   );
-}
+};
+
+export default App;

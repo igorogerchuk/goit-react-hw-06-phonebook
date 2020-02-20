@@ -2,7 +2,7 @@ import React, { useMemo, useContext, useEffect } from "react";
 import localStorageHandler from "../services/localStorageHandler";
 import { Context } from "../services/Store";
 
-export default function ContactList({ filter }) {
+const ContactList = ({ filter }) => {
   const [contacts, dispatch] = useContext(Context);
 
   useEffect(() => {
@@ -36,4 +36,6 @@ export default function ContactList({ filter }) {
       )}
     </>
   );
-}
+};
+
+export default ContactList;
